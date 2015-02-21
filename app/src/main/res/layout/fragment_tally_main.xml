@@ -26,7 +26,7 @@
         android:layout_below="@id/counter"
         android:layout_marginTop="32dp"
         android:textColor="#ffff431d"
-       />
+        />
 
     <Button
         android:layout_width="fill_parent"
@@ -36,5 +36,5 @@
         android:layout_marginTop="42dp"
         android:layout_below="@id/next"
         android:textColor="#ffff431d"
-         />
+        />
 </RelativeLayout>
