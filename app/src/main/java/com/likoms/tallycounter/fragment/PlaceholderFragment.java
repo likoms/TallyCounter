@@ -63,7 +63,6 @@ public class PlaceholderFragment extends Fragment {
         resetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODo show dialog to user if he is sure
                 // Create the AlertDialog object and return it
                 AlertDialog alert = builder.create();
                 alert.show();
@@ -75,24 +74,7 @@ public class PlaceholderFragment extends Fragment {
 
         return rootView;
     }
-  /* public void showMsgDialog() {
-        // Use the Builder class for convenient dialog construction
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage(R.string.confirm_dialog)
-                .setPositiveButton(R.string.yes_option_dialog, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        counter.setText("0");
-                    }
-                })
-                .setNegativeButton(R.string.cancel_option_dialog, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
-                    }
-                });
-        // Create the AlertDialog object and return it
-       AlertDialog alert = builder.create();
-       alert.show();
-    }*/
+
 
 
 }
