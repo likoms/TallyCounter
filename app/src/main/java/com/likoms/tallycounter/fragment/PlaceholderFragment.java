@@ -20,7 +20,7 @@ public class PlaceholderFragment extends Fragment {
     private TextView counter;
     private Button nextButton;
     private Button resetButton;
-    AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
 
     public PlaceholderFragment() {
     }
@@ -34,6 +34,7 @@ public class PlaceholderFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         final View rootView = inflater.inflate(R.layout.fragment_tally_main, container, false);
         this.counter = (TextView) rootView.findViewById(R.id.counter);
         this.nextButton = (Button) rootView.findViewById(R.id.next);
@@ -45,16 +46,16 @@ public class PlaceholderFragment extends Fragment {
             }
         });
         //Dialog
-        this.builder.setMessage(R.string.confirm_dialog)
+        builder.setMessage(R.string.confirm_dialog)
                 .setPositiveButton(R.string.yes_option_dialog, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         counter.setText("0");
-                        dialog.cancel();
+                        dialog.dismiss();
                     }
                 })
                 .setNegativeButton(R.string.cancel_option_dialog, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        dialog.cancel();
+                        dialog.dismiss();
                     }
                 });
         //End of dialog
